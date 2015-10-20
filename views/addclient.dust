@@ -1,0 +1,64 @@
+{>"index"/}
+{<body}
+             <div class="container">
+                    <div class="block-header">
+                        <h2>Form Elements</h2>
+                    
+                     </div>
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Add client</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <p class="c-black f-500">Add new clients</p>
+                            <form role="form" method="post" name="form1" id="form1" action="/manageclients">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" name="clientname" class="form-control" id="clientname" placeholder="Enter name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" name="clientemail" class="form-control" id="clientemail" placeholder="Enter email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" name="clientmobilenum" class="form-control" id="clientmobilenum" placeholder="Enter Mobile number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <textarea class="form-control" name="clientaddress" id="clientaddress" placeholder="Enter Address"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button id="addclient" class="btn btn-primary col-md-offset-4"/>SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+{/body}
+<script>
+    $(document).ready(function(){
+        $( '#form1' ).each(function(){
+            this.reset();
+        });
+    });
+</script>
+    
+
+         
