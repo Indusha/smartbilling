@@ -1,0 +1,68 @@
+{>"index"/}
+{<body}
+             <div class="container">
+                    <div class="block-header">
+                        <h2>Add Product</h2>
+                    
+                     </div>
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Add Product</h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <p class="c-black f-500">Add new clients</p>
+                            <form role="form" method="post" name="form2" id="form2" action="/manageproducts">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" name="productcode" class="form-control" id="productcode" placeholder="Enter Code">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" name="productname" class="form-control" id="productname" placeholder="Enter name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" name="productspec" class="form-control" id="productspec" placeholder="Enter Specification">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" class="form-control" name="productprice" id="productprice" placeholder="Enter Price"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" class="form-control" name="productmrp" id="productmrp" placeholder="Enter MRP"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="col-sm-4 col-md-offset-3">
+                                        <div class="form-group">
+                                            <div class="fg-line">
+                                                <input type="text" class="form-control" name="productstock" id="productstock" placeholder="Enter availability"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button id="addproduct" class="btn btn-primary col-md-offset-4"/>SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+{/body}

@@ -2,7 +2,7 @@
 {<body}
                 <div class="container">
                     <div class="block-header">
-                        <h2>Manage Clients</h2>
+                        <h2>Manage Products</h2>
                     </div>
                     
                     <div class="card">
@@ -21,18 +21,16 @@
                                 </tr>
                             </thead>
                             <tbody data-id="1">
-                                {#userdetails}
+                                {#productdetails}
                                     <tr>
+                                        <td>{code}</td>
                                         <td>{name}</td>
-                                        <td>{email}</td>
-                                        <td>{mobilenum}</td>
-                                        <td>{address}</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon command-edit editbtn" data-id="{_id}"><span class="zmdi zmdi-edit"></span></button>  
-                                            <button type="button" class="btn btn-icon command-delete deletebtn" data-id="{_id}"><span class="zmdi zmdi-delete"></span></button>
-                                        </td>    
+                                        <td>{specification}</td>
+                                        <td>{price}</td>
+                                        <td>{mrp}</td> 
+                                        <td>{stock}</td>   
                                     </tr>
-                                {/userdetails}
+                                {/productdetails}
                             </tbody>
                         </table>
                     </div>
