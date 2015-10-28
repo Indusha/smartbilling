@@ -20,16 +20,32 @@ router.get('/manageclient', function(req, res, next) {
 		res.render('manageclient', { title: 'Express' ,userdetails:records});
 	});
 });
-
+router.get('/manageproduct', function(req, res, next) {
+	db.collection('addproduct').find({}).toArray(function(err,records){
+		res.render('manageproduct', { title: 'Express' ,productdetails:records});
+	});
+});
 router.get('/addclient',function(req,res,next){
 	res.render('addclient',{ title: 'Express'});
 });
+router.get('/addproduct',function(req,res,next){
+	res.render('addproduct',{ title: 'Express'});
+});
 
-router.post('/manageclient',function(req,res,next){
+router.post('/manageclients',function(req,res,next){
 	var data = {name:req.body.clientname,email:req.body.clientemail,mobilenum:req.body.clientmobilenum,address:req.body.clientaddress};
 	db.collection('addclient').insert(data,function(err,records){
 		db.collection('addclient').find({}).toArray(function(err,data){
 			res.render('manageclient', { title: 'Express' ,userdetails:data});
+			console.log(err);
+		});
+	});
+});
+router.post('/manageproducts',function(req,res,next){
+	var data = {code:req.body.productcode,name:req.body.productname,specification:req.body.productspec,price:req.body.productprice,mrp:req.body.productmrp,stock:req.body.productstock};
+	db.collection('addproduct').insert(data,function(err,records){
+		db.collection('addproduct').find({}).toArray(function(err,data){
+			res.render('manageproduct', { title: 'Express' ,productdetails:data});
 			console.log(err);
 		});
 	});
